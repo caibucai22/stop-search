@@ -1,0 +1,17 @@
+site_name: StopFind
+site_url: http://stopfind.caibucai.top
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.sections
+  palette:
+    - scheme: default
+    - scheme: slate
+extra_css:
+  - stylesheets/extra.css
+extra_javascript:
+  - javascripts/extra.js
+
+nav:
+  - 首页: index.md
