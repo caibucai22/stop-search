@@ -1,5 +1,9 @@
 site_name: StopSearch
 site_url: http://stopsearch.caibucai.top
+
+repo_name: 'caibucai22/stop-search'
+repo_url: 'https://github.com/caibucai22/stop-search'
+
 theme:
   name: material
   features:
@@ -11,11 +15,19 @@ theme:
     - navigation.expand
   palette:
     - scheme: default
+      toggle:
+        icon: material/brightness-7 # (2)!
+        name: Switch to dark mode
     - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
 extra_css:
   - stylesheets/extra.css
 extra_javascript:
-  - javascripts/extra.js
+  - assets/javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
 #contents
 nav:
@@ -45,3 +57,25 @@ nav:
     - LLM: llm/index.md
   - Weekly: weekly/index.md
   - 关于: about/index.md
+
+
+markdown_extensions:
+  - admonition  #警告
+  - pymdownx.details  #细节折叠
+  - pymdownx.superfences  #超级围栏
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.snippets # 片段
+  - pymdownx.arithmatex: # 数学公式
+      generic: true
+  - tables
+  - pymdownx.caret  #插入角标符号(`^`)  
+  - pymdownx.mark   #双等号(`==`)
+  - pymdownx.tilde  #波浪号(`~`)
+  - pymdownx.highlight:
+      anchor_linenums: true  #代码块行号锚链接，默认false
+      use_pygments: true  #在构建期间使用Pygments或在浏览器中使用 JavaScript 语法高亮器进行高亮显示，默认true
+      auto_title: true  #自动为所有代码块添加标题，显示正在使用的语言的名称，默认false
+      linenums: true #向所有代码块添加行号，默认false
+      linenums_style: pymdownx-inline #三种添加行号的方法，建议table或pymdownx-inline。默认table
+  - pymdownx.progressbar
