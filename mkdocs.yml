@@ -55,6 +55,10 @@ nav:
   - DL:
     - CV: cv/index.md
     - LLM: llm/index.md
+  - Tools: tools/index.md
+  - Uncategoried: 
+    - 简介: uncategoried/index.md
+    - hr面: uncategoried/hr_interview.md
   - Weekly: weekly/index.md
   - 关于: about/index.md
 
